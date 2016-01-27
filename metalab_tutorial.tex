@@ -23,32 +23,40 @@
 \usepackage{cogsci}
 \usepackage{pslatex}
 \usepackage{apacite}
+\usepackage{graphicx}
 
 
-\title{Tutorial: Meta-Analytic methods for Cognitive Science}
 
-\author{{\large \bf Sho Tsuji (xyz@abc.def)} \\
-  Department of Psychology\\
-  Madison, WI 53706 USA
-  \And {\large \bf Molly Lewis(xyz@abc.def)} \\
+\title{Tutorial: Meta-Analytic Methods for Cognitive Science}
+
+\author{{\large \bf Sho Tsuji } \\
+    \texttt{tsujish@gmail.com}\\
+  Département d'Etudes Cognitives\\
+   Ecole Normale Supérieure
+  \And {\large \bf Molly Lewis} \\
+  \texttt{mll@stanford.edu}\\
     Department of Psychology\\
-    Madison, WI 53706 USA
-  \And {\large \bf Mika Braginsky (xyz@abc.def)} \\
+    Stanford University
+  \And {\large \bf Mika Braginsky} \\
+    \texttt{mikabr@stanford.edu}\\
       Department of Psychology\\
-      Madison, WI 53706 USA
-  \AND {\large \bf Christina Bergmann (xyz@abc.def)} \\
-        Department of Psychology \\
-        Madison, WI 53706 USA
-  \And      {\large \bf Page Piccinini (xyz@abc.def)} \\
-          Department of Psychology \\
-          Madison, WI 53706 USA
-  \And        {\large \bf Mike Frank (xyz@abc.def)} \\
+      Stanford University
+  \AND {\large \bf Christina Bergmann} \\
+      \texttt{chbergma@gmail.com}\\
+  Département d'Etudes Cognitives\\
+   Ecole Normale Supérieure
+     \And      {\large \bf Page Piccinini } \\
+     \texttt{page.piccinini@gmail.com}\\
+  Département d'Etudes Cognitives\\
+   Ecole Normale Supérieure
+  \And        {\large \bf Mike Frank} \\
+     \texttt{mcfrank@stanford.edu}\\
             Department of Psychology \\
-            Madison, WI 53706 USA
-  \AND          {\large \bf Alex Cristia (xyz@abc.def)} \\
-              Department of Psychology \\
-              Madison, WI 53706 USA}
-
+            Stanford University
+  \AND          {\large \bf Alejandrina Cristia} \\
+      \texttt{alecristia@gmail.com}\\
+  Département d'Etudes Cognitives\\
+   Ecole Normale Supérieure}
 
 \begin{document}
 
@@ -56,56 +64,65 @@
 
 \begin{quote}
 \small
+Meta-analysis is a powerful and underused tool in cognitive science. It allows researchers to leverage entire bodies of literature to make more precise estimates of effect sizes, which are important for theory development, as well as for conducing power-analyses for prospective studies. In this tutorial, we will introduce meta-analysis as an analytical tool, and provide participants with hands-on experience conducting their own meta-analysis. We will also present an online platform we have developed for conducing meta-analyses in the field of language development: MetaLab (\url{http://metalab.stanford.edu}). 
+
 \textbf{Keywords:}
-add your choice of indexing terms or keywords; kindly use a
-semicolon; between each term
+meta-analysis; reproducability
 \end{quote}
 
-\section{General Formatting Instructions}
-
-CogSci abstract
 
 % Tutorials allow participants to gain new insights, knowledge, and skills from a broad range of topics in the field of cognitive science. Tutorials must cover a well-established topic or method, and should be delivered by one or more experts in that area. Tutorials should be presented at a level that will make the material accessible to a postgraduate student with a first degree in a discipline or area of cognitive science. We strongly encourage an interactive delivery format. Tutorials may either be a half-day or full-day in duration. Half-day tutorials are about 3 hours long (not including breaks). Full-day tutorials are about 6 hours long (not including breaks). Proposals should be submitted as two-page summaries that describe the significance of the topic or method, describe the structure and activities to be included in the tutorial, describe the credentials of the tutorial organizer, and include relevant references. (See "Submission Formats," below.) Comments and evaluations from reviewers will be solicited to aid in making decisions about whether or not to accept a given proposal. Organizers of accepted tutorials will be reimbursed for expenses associated with organizing the tutorial, up to a fixed limit ($600 for each half-day tutorial and $1200 for each full-day tutorial that is delivered). If organizers wish to request reimbursement, they need to submit a budget with their proposal. Budgets cannot include travel, hotel, per diems, food/drink (for the session or the organizers), or printed materials. Budgets may include registration costs for individuals that would not otherwise attend the meeting because of demonstrated hardship. Tutorial participants will be charged an extra fee of $30 on top of the regular conference registration. Tutorial organizers will be given access to the email addresses of the preregistered participants so they can contact them in advance about what equipment or supplies to bring, as well as let them know of any preparations that they should make, prior to the tutorial.
 
 \section{Significance}
 
-The past years have presented the cognitive science community with a number of challenges, such as an increased demand for robust research planning [1]. Meta-analyses are a key method to design new studies robustly based on prior results, for instance allowing to base sample size decisions on power analysis. However, conducting a meta-analysis is an effortful study project on its own, and it is not clear that the advantages for an individual researcher justify the resources tied to conducting one.
+The empirical social sciences are in crisis: many subfields are plagued by issues of low reliability and validity of their findings \cite{ioannidis2005most,open2013reproducibility,open2015estimating}. One source of this crisis may be poor estimates of effect size as a result of under-powered studies. Meta-analysis is powerful tool for addressing this issue. By aggregating across studies, meta-analysis allows researchers to get more precise estimates of effect size than could be achieved by a single study alone. Critically,  better  estimates of effect size allow researchers to design new studies robustly,  by basing sample size decisions on power analysis, and develop theories better grounded in the empirical data.
 
-The MetaLab (\url{http://metalab.stanford.edu}) project proposes three solutions to this problem. First, we provide a package of instruction material, templates, and analysis scripts, streamlining the process of learning about and conducting a meta-analysis [2]. Second, we propose the concept of community-augmented meta-analysis (CAMA) [3], allowing a meta-analysis to be conducted and extended by multiple researchers, both reducing the workload of the individual researcher as well as allowing for dynamic extensions to always include the newest results. Third, for each meta-analysis conducted in the MetaLab framework, we provide free and easy-to-use tools for study planning and power analysis, allowing a whole research community to profit from a meta-analysis once conducted [2]. These extensions to the well-established method of meta-analysis will lower the hurdle of conducting a meta-analysis at the same time as increasing the benefits of a meta-analysis once conducted for a whole research community.
+However, despite these benefits, meta-analysis has not become a prevalent tool in cognitive science. One reason may be that there are high hurdles and few rewards to conducting a meta-analysis. Conducting a meta-analysis is a laborious process, particularly according to common practice where a few people do the work, and with little ready-to-use support tools and educational materials available. In addition, the general benefits of meta-analyses, for instance the possibility of conducting power analyses, are often neither evident nor accessible to individual researchers, and so the incentives for conducting analyses are low. Moreover, traditional meta-analyses remain static after publication, aging quickly as new results emerge. 
 
-\section{MetaLab Infrastructure}
+The goal of of this tutorial is to lower these hurdles and demonstrate the potential rewards for conducting meta-analyses. We will start with a broad introduction to meta-analyses as an analytical tool. Participants will then get hands-on experience conducting a meta-analysis in an interactive session. By the end of the tutorial,  participants  will have a better understanding of the practical and theoretical utility of meta-analysis, as well as working knowledge about how to go about conducting their own meta-analysis in a topic of interest.
 
-MetaLab provides spreadsheet templates which include necessary and optional columns and column values.
+Part of the focus of the tutorial will be introducing participants to a tool we have been developing for meta-analysis, MetaLab \cite<\url{http://metalab.stanford.edu};>{bergmann2015,lewis2015}. MetaLab is an online platform that aggregates meta-analyses on topics related to language development \cite<e.g., phoneme discrimination and word segmentation;> {tsuji2014perceptual,bergmann2015development}. MetaLab addresses three key challenges in conducting meta-analyses. First, it supplies templates and analysis scripts, streamlining the process of learning about and conducting a meta-analysis. Second, it supports community-augmented meta-analyses  \cite<CAMA;>{tsuji2014community}, allowing a meta-analysis to be conducted and extended by multiple researchers, both reducing the workload of the individual researcher as well as allowing for dynamic extensions to always include the newest results. Third, for each meta-analysis conducted in the MetaLab framework, we provide free and easy-to-use tools for power analysis and data exploration (Fig. 1).
 
-\section{Structure/Activities}
+By introducing researchers to  the  method of meta-analysis, this tutorial will promote thinking in terms of effect sizes rather than significance, emphasize replicability, and increase the benefits of meta-analysis for the whole research community.
 
-This one-day tutorial will introduce participants to the method of meta-analysis, providing a hands-on step-to-step guide to use the MetaLab infrastructure for conducting a meta-analysis, working on it collaboratively, and sharing it with the research community.
-Participants will connect to the MetaLab infrastructure while following a step-to-step guide to conduct a meta-analysis based on a pre-selected topic. The topics of literature search and study selection, which precede the actual meta-analysis, will be covered briefly, but not included in the hands-on part of the tutorial. Participants will be walked through the steps of a meta-analysis with a theoretical and practical part in each step. Two tutorial organizers will be available for questions and assistance throughout the tutorial.
+\begin{figure}[t]
+\begin{center}
+\includegraphics[scale = .2]{power_calculator2.png}
+\end{center}
+\vspace{-.5em}
+\caption{Screenshot of the MetaLab interactive tool. For each meta-analysis in the database, MetaLab provides a set of visualization tools, allowing users to interactively explore the role of moderators on effect sizes. Here, we see an increasing effect sizes for the bias to select a novel referent for a novel word (mutual exclusivity) across development, and as a function of method. }
+\label{fig:lev}
+\vspace{-1em}
+\end{figure}
 
-Coding of variables (2h)
-Theory: How to decide on independent and dependent variables to be included; which information is needed
-Hands-on: Set-up of a spreadsheet in standardized format, deciding on variables to be included, coding of one pre-selected article (different article for each participant)
-Effect size calculation (1h)
-Theory: Introduction to different types of effect sizes, their calculation, and how to transform between them
-Hands-on: Effect size calculation for paper coded
-Meta-analysis (3h)
-Theory: Introduction to meta-analytic regression, choice of model, choice of moderator variables, correction for publication bias, and interpretation of analysis output
-Hands-on: Putting together the papers coded by each participant and conducting a meta-analysis
+\section{Structure}
+
+This one-day [half-day?] tutorial will introduce participants to the method of meta-analysis, providing a hands-on step-to-step guide to use the MetaLab infrastructure for conducting a meta-analysis, working on it collaboratively, and sharing it with the research community.
+
+Participants will  step-to-step guide to conduct a meta-analysis based on a pre-selected topic. The topics of literature search and study selection, which precede the actual meta-analysis, will be covered briefly, but not included in the hands-on part of the tutorial. Participants will be walked through the steps of a meta-analysis with a theoretical and practical part in each step. Two tutorial organizers will be available for questions and assistance throughout the tutorial.
+
+\begin{enumerate}
+    \item Coding of variables (2h)
+    \begin{enumerate}
+        \item Theory: How to decide on independent and dependent variables to be included; which information is needed
+        \item Hands-on: Set-up of a spreadsheet in standardized format, deciding on variables to be included, coding of one pre-selected article (different article for each participant)
+    \end{enumerate}
+    \item Effect size calculation (1h)
+    \begin{enumerate}
+        \item Theory: Introduction to different types of effect sizes, their calculation, and how to transform between them
+        \item Hands-on: Effect size calculation for paper coded
+    \end{enumerate}
+    \item Meta-analysis (3h)
+    \begin{enumerate}
+        \item Theory: Introduction to meta-analytic regression, choice of model, choice of moderator variables, correction for publication bias, and interpretation of analysis output
+       \item Hands-on: Putting together the papers coded by each participant and conducting a meta-analysis
+        \end{enumerate}
+\end{enumerate}
+
+
 
 \section{Organizer Credentials}
-
-Sho
-Molly Lewis
-Mika Braginsky
-Who else will be there?
-%
-% References
-% [1]
-% [2] Bergmann, S., Tsuji, S., Lewis, M., Braginsky, M., Piccinini, P., Cristia, A., & Frank, M. C. (2015). MetaLab: Power Analysis and Experimental Design in Developmental Research Made Easy. Poster presented at the 6th Annual Budapest CEU Conference on Cognitive Development. https://dx.doi.org/10.6084/m9.figshare.2064348.v1
-% [3] Tsuji, S., Bergmann, C., & Cristia, A. (2014). Community-Augmented Meta-Analyses Toward Cumulative Data Assessment. Perspectives on Psychological Science, 9(6), 661-665.
-
-
-
+ All organizers have conducted meta-analyses in their field. We have also worked together to develop the MetaLab platform since 2/2015. AC, CB, and ST have expertise creating CAMAs \cite{tsuji2014community}. ST, ML, CB, and AC have experience leading meta-analysis workshops. MB, MF, ML, and PP have experience with web development, dynamic data entry, and online statistical analyses.  
 
 
 \bibliographystyle{apacite}
@@ -113,7 +130,5 @@ Who else will be there?
 \setlength{\bibleftmargin}{.125in}
 \setlength{\bibindent}{-\bibleftmargin}
 
-\bibliography{metalab_template}
-
-
+\bibliography{metalab_tutorial}
 \end{document}
