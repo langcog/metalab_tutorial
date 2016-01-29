@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.7.16)  26 JAN 2016 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.7.16)  27 JAN 2016 16:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -217,18 +217,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
-Missing character: There is no Ž in font ptmr7t!
-Missing character: There is no Ž in font ptmr7t!
-Missing character: There is no Ž in font ptmr7t!
-Missing character: There is no Ž in font ptmr7t!
-Missing character: There is no Ž in font ptmr7t!
-Missing character: There is no Ž in font ptmr7t!
-Missing character: There is no Ž in font ptmr7t!
-Missing character: There is no Ž in font ptmr7t!
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
+
+Underfull \hbox (badness 1590) in paragraph at lines 82--83
+\OT1/ptm/m/n/10 demon-strate the po-ten-tial re-wards for con-duct-ing meta-
+ []
 
 <power_calculator2.png, id=1, 1196.47pt x 714.67pt>
 File: power_calculator2.png Graphic file (type png)
@@ -243,10 +239,10 @@ Package pdftex.def Info: power_calculator2.png used on input line 90.
 ] (./metalab_tutorial.bbl) [2 <./power_calculator2.png>]
 (./metalab_tutorial.aux) ) 
 Here is how much of TeX's memory you used:
- 2220 strings out of 493093
- 31390 string characters out of 6134989
- 97595 words of memory out of 5000000
- 5674 multiletter control sequences out of 15000+600000
+ 2221 strings out of 493093
+ 31398 string characters out of 6134989
+ 97609 words of memory out of 5000000
+ 5675 multiletter control sequences out of 15000+600000
  25699 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,9n,23p,2064b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -255,7 +251,7 @@ ase/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.p
 fb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on metalab_tutorial.pdf (2 pages, 268045 bytes).
+Output written on metalab_tutorial.pdf (2 pages, 268325 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
